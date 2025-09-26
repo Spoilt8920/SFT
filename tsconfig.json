@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@types": ["src_v2/types"],
+      "@utils/*": ["src_v2/utils/*"],
+      "@auth/*": ["src_v2/auth/*"],
+      "@db/*": ["src_v2/database/*"],
+      "@torn/*": ["src_v2/torn/*"],
+      "@roster/*": ["src_v2/roster/*"],
+      "@sync/*": ["src_v2/sync/*"],
+      "@pages/*": ["src_v2/pages/*"]
+    }
+  }
+}

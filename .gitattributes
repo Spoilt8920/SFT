@@ -1,0 +1,26 @@
+# Enforce LF line endings for code and config
+*.ts     text eol=lf
+*.js     text eol=lf
+*.json   text eol=lf
+*.sql    text eol=lf
+*.sh     text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.gitignore text eol=lf
+*.editorconfig text eol=lf
+*.prettierrc text eol=lf
+
+# Windows batch files should keep CRLF
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# Binary files (never modify line endings)
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.exe    binary
+*.dll    binary
+*.db     binary

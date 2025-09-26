@@ -1,0 +1,31 @@
+{
+	"kv_namespaces": [
+		{
+			"binding": "RATE",
+			"id": "dev-local-stub",
+			"preview_id": "dev-local-stub"
+		}
+	],
+	"vars": {
+		"TORN_COMMENT": "SFT"
+	},
+	"name": "sft-api",
+	"main": "src_v2/index.ts",
+	"compatibility_date": "2025-09-01",
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "sft-db",
+			"database_id": "488524df-114b-4ebf-9760-97bac646b22a"
+		}
+	],
+	"assets": {
+		"directory": "public",
+		"binding": "ASSETS"
+	},
+	"triggers": {
+		"crons": [
+			"0 9 * * *"
+		]
+	}
+}

@@ -1,0 +1,11 @@
+.wrangler/
+.wrangler/state/
+node_modules/
+.dev.vars
+src/index - Copy*.ts
+repo_summary.txt
+*.log
+.env
+.vscode/
+.DS_Store
+Thumbs.db
