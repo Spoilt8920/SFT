@@ -9,4 +9,6 @@ export type Env = {
   ADMIN_PLAYER_IDS?: string;
 };
 export type Ctx = { env: Env; ctx: ExecutionContext };
-export type UserCtx = { player_id: number; player_name?: string; faction_id: number; faction_name?: string };
+export type UserCtx =
+  | { ok: true; player_id: number; player_name: string; faction_id: number | 0 }
+  | { ok: false; error: string };

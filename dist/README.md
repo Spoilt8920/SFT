@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "sft-api" generated at 2025-09-26T19:27:18.628Z.

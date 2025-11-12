@@ -32,7 +32,7 @@ export function pageHtml({ title, body, active }: { title: string; body: string;
 <link rel="stylesheet" href="/styles.css?v=9"/>
 <style>
 :root{color-scheme:dark}
-body{margin:0;background:#0b0b0c;color:#e7e7ea;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background-color:#0b0b0c;color:#e7e7ea;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 .container{max-width:1100px;margin:24px auto;padding:0 16px}
 .nav{position:sticky;top:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);
      border-bottom:1px solid #222;padding:10px 16px;z-index:5}

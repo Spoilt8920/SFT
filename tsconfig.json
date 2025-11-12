@@ -1,15 +1,31 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    "lib": ["ES2022", "DOM", "DOM.Iterable", "WebWorker"],
+    "types": ["@cloudflare/workers-types"],
+
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+
     "baseUrl": ".",
     "paths": {
-      "@types": ["src_v2/types"],
+      "@types": ["src_v2/types/index.ts"],      
+      "@types/*": ["src_v2/types/*"],
+      "@db": ["src_v2/database/index.ts"],      
+      "@db/*": ["src_v2/database/*"],        
+      "@database/*": ["src_v2/database/*"],
       "@utils/*": ["src_v2/utils/*"],
       "@auth/*": ["src_v2/auth/*"],
-      "@db/*": ["src_v2/database/*"],
       "@torn/*": ["src_v2/torn/*"],
       "@roster/*": ["src_v2/roster/*"],
       "@sync/*": ["src_v2/sync/*"],
       "@pages/*": ["src_v2/pages/*"]
     }
-  }
+  },
+  "include": ["src_v2", "src_v2/**/*.ts"],
+  "exclude": ["node_modules", "dist", "src"]  // ← exclude the legacy v1 for now
 }

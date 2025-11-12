@@ -7,7 +7,7 @@ import * as auth from "@auth/handlers";
 import * as pageWelcome from "@pages/welcome";
 import { rosterOverviewPage } from "@pages/roster_overview";
 import { attacksPage } from "@pages/attacks";
-import { managePage } from "@pages/manage";
+import { managePage, backfillRoster, backfillProgress } from "@pages/manage";
 
 export default {
   async scheduled(_evt: ScheduledEvent, _env: Env, _ctx: ExecutionContext) {
@@ -50,14 +50,19 @@ export default {
     if (pathname === "/roster/overview.json" && req.method === "GET") {
       return roster.overviewJSON(req, env);
     }
-
-    // --- JSON/API (Manage & Sync) — stubs until wired ---
-    if (pathname === "/manage/backfill-roster" && req.method === "POST") {
-      // TODO: import and call your backfill here
-      return json({ ok: false, error: "not_implemented" }, { status: 501 });
+    if (pathname === "/roster/refresh" && req.method === "POST") {
+      return roster.refreshRoster(req, env);
     }
+
+    // --- JSON/API (Manage & Sync) ---
+    if (pathname === "/manage/backfill-roster" && req.method === "POST") {
+  return backfillRoster(req, env);
+}
+if (pathname === "/manage/backfill-progress" && req.method === "GET") {
+  return backfillProgress(req, env);
+}
     if (pathname === "/sync/roster" && req.method === "POST") {
-      // TODO: import and call your delta sync here
+      // TODO: implement delta sync
       return json({ ok: false, error: "not_implemented" }, { status: 501 });
     }
 
